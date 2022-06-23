@@ -1,7 +1,7 @@
 # include<stdio.h> 
 // Merge function.
 void merge(int arr[],int low,int high){
-    int mid = low/2+high/2;
+    int mid = low+(high-low)/2;
     int len1 = mid-low+1;
     int len2 = high -mid;
     int arr1[len1];
