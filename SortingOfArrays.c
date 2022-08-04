@@ -36,8 +36,9 @@ void merge(int arr[],int low,int high){
 }
 // Merge sorting.
 void mergeSort(int arr[],int low,int high){
+    // Firstly find middle element.
     int mid = low +(high-low)/2;
-    while(low<=high){
+    while(low>=high){
         return;
     }
     mergeSort(arr,low,mid);
