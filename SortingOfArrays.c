@@ -117,15 +117,15 @@ void insertSort(int arr[],int n){
     printf("INSERTION SORTING\n");
     int cmp = 0;
     int swap = 0;
-    for(int i =0;i<n;i++){
-        for(int j = i;j<n;j++){
-            if(arr[i]>arr[j]){
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-                swap++;
-                cmp++;
-            }
+    for(int i =1;i<n;i++){
+       int key = arr[i];
+	    int j = i-1;
+	    cmp++;
+	    while(j>=0 && arr[j]>key){
+		    int temp = arr[j];
+		    arr[j] = key;
+		    key = temp;
+		    swap++;
         }
     }
     printf("No of comparisons is %d and no of swapping is %d\n",cmp,swap);
